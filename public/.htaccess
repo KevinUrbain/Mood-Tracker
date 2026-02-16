@@ -1,10 +1,7 @@
 RewriteEngine On
-
-# Si le fichier demandé n'existe pas physiquement (ex: une image CSS), alors...
+RewriteBase /mood-tracker/public/
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-# ... rediriger tout vers index.php
-
-RewriteRule ^ index.php [QSA,L]
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
