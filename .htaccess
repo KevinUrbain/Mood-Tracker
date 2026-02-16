@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Bloquer accès aux dossiers sensibles
+RewriteRule ^(src|vendor|composer\.json|composer\.lock|README\.md) - [F,L]
+
+# Rediriger tout vers public/
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(.*)$ public/$1 [L]
