@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'User\\Moodtracker\\' => array($baseDir . '/src'),
+    'App\\' => array($baseDir . '/src'),
 );
