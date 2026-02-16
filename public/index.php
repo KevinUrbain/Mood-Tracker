@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
+use App\Core\Router;
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-var_dump($_GET);
+$route = new Router();
+
+$route->routeRequest();

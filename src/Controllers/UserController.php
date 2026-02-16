@@ -3,8 +3,13 @@ namespace App\Controllers;
 
 class UserController
 {
-    public function getUser()
+    public function index()
     {
-        echo 'getUser method';
+        echo 'méthode index() du UserController';
+    }
+
+    public function createUser()
+    {
+
     }
 }
